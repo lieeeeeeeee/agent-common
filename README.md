@@ -42,7 +42,7 @@ ln -s "$PWD/skills/adr-writing" ~/.codex/skills/adr-writing
 
 | プロンプト | できること |
 | --- | --- |
-| [illustration](prompts/illustration.md) | 画像生成のプロンプトに追加し、AI らしさを抑える |
+| [illustration](prompts/illustration/) | 画像生成のプロンプトに追加し、AI らしさを抑える |
 
 ## ライセンス
 
