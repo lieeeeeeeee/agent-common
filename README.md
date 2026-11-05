@@ -44,6 +44,12 @@ ln -s "$PWD/skills/adr-writing" ~/.codex/skills/adr-writing
 | --- | --- |
 | [illustration](prompts/illustration/) | 画像生成のプロンプトに追加し、AI らしさを抑える |
 
+illustration を追加した場合の比較です。
+
+| 追加なし | 追加あり |
+| --- | --- |
+| ![追加なしの動画サムネイル](prompts/illustration/examples/03-before.webp) | ![追加ありの動画サムネイル](prompts/illustration/examples/03-after.webp) |
+
 ## ライセンス
 
 [MIT](LICENSE)
