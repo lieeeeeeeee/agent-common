@@ -1,6 +1,6 @@
 # agent-common
 
-Claude Code と Codex で使っている、日本語の Skill と共通規約です。
+Claude Code と Codex で使っている、日本語の Skill と共通規約です。画像生成などに使うプロンプトも置いています。
 
 ## Skill
 
@@ -37,6 +37,12 @@ ln -s "$PWD/skills/adr-writing" ~/.codex/skills/adr-writing
 作者が全プロジェクトで使っている、AI 向けの規約です。
 
 `~/.claude/CLAUDE.md` や `~/.codex/AGENTS.md` へそのまま置くと既存の設定を置き換えるため、必要な章だけ取り入れてください。第 8 章は作者の好みの口調、第 9 章は作者の環境のファイル配置です。
+
+## プロンプト
+
+| プロンプト | できること |
+| --- | --- |
+| [illustration](prompts/illustration.md) | 画像生成のプロンプトに追加し、AI らしさを抑える |
 
 ## ライセンス
 
