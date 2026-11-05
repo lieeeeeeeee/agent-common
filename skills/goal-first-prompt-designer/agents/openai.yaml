@@ -1,0 +1,3 @@
+interface:
+  display_name: "Goal First Prompt Designer"
+  short_description: "対話で目的と必須条件をすり合わせ、ユーザーの明示的な合意後に、その範囲だけを伝える簡潔なAI向けプロンプトを作る。プロンプトの作成・改善を依頼されたときに使用する。"

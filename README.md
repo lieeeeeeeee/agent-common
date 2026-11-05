@@ -1,0 +1,43 @@
+# agent-common
+
+Claude Code と Codex で使っている、日本語の Skill と共通規約です。
+
+## Skill
+
+| Skill | できること |
+| --- | --- |
+| [adr-writing](skills/adr-writing/SKILL.md) | 設計判断を、後から意図を読み取れる ADR にまとめる |
+| [explain-before-shorten](skills/explain-before-shorten/SKILL.md) | 日本語の説明を、意味と条件を保って簡潔にする |
+| [game-content-writing](skills/game-content-writing/SKILL.md) | ゲーム内の効果・能力・用語・ルールの説明文を作成・検証する |
+| [goal-first-prompt-designer](skills/goal-first-prompt-designer/SKILL.md) | 目的と必須条件をすり合わせてから、AI 向けプロンプトを作る |
+| [learn-from-corrections](skills/learn-from-corrections/SKILL.md) | セッションで受けた指摘から、規約に残す教訓と文案を提案する |
+| [session-close](skills/session-close/SKILL.md) | 会話で確定した情報を、既存の文書や Skill へ整理する |
+
+`session-close` は、Skill の作成・更新に skill-creator Skill を使います。
+
+## 導入
+
+使いたい Skill のディレクトリを、ツールごとの Skill ディレクトリへリンクします。
+
+```sh
+git clone https://github.com/lieeeeeeeee/agent-common.git
+cd agent-common
+
+# Claude Code
+mkdir -p ~/.claude/skills
+ln -s "$PWD/skills/adr-writing" ~/.claude/skills/adr-writing
+
+# Codex
+mkdir -p ~/.codex/skills
+ln -s "$PWD/skills/adr-writing" ~/.codex/skills/adr-writing
+```
+
+## common.md
+
+作者が全プロジェクトで使っている、AI 向けの規約です。
+
+`~/.claude/CLAUDE.md` や `~/.codex/AGENTS.md` へそのまま置くと既存の設定を置き換えるため、必要な章だけ取り入れてください。第 8 章は作者の好みの口調、第 9 章は作者の環境のファイル配置です。
+
+## ライセンス
+
+[MIT](LICENSE)

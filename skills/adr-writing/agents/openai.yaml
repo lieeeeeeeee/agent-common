@@ -1,0 +1,3 @@
+interface:
+  display_name: "ADRの作成"
+  short_description: "後から読み返して判断と意図を読み取れるADRを新規作成する"

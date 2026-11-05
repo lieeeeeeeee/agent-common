@@ -1,0 +1,3 @@
+interface:
+  display_name: "Explain Before Shorten"
+  short_description: "日本語の説明を、意味と重要な条件を保ちながら自然で簡潔に整える"

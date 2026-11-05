@@ -1,0 +1,3 @@
+interface:
+  display_name: "Session Close"
+  short_description: "会話で確定した情報を、既存の文書やskillへ整理する"
