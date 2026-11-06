@@ -133,7 +133,7 @@
 | `skills/game-content-writing/` | 全プロジェクト | `~/.claude/skills/game-content-writing`、`~/.codex/skills/game-content-writing` |
 | `skills/goal-first-prompt-designer/` | 全プロジェクト | `~/.claude/skills/goal-first-prompt-designer`、`~/.codex/skills/goal-first-prompt-designer` |
 | `skills/learn-from-corrections/` | 全プロジェクト | `~/.claude/skills/learn-from-corrections`、`~/.codex/skills/learn-from-corrections` |
-| `skills/session-close/` | 全プロジェクト | `~/.codex/skills/session-close` |
+| `skills/session-close/` | 全プロジェクト | `~/.claude/skills/session-close`、`~/.codex/skills/session-close` |
 
 9.2. リンク元はすべてシンボリックリンクである。変更するときは必ず実体のほうを編集すること。
 
