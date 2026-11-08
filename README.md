@@ -43,6 +43,7 @@ ln -s "$PWD/skills/adr-writing" ~/.codex/skills/adr-writing
 | プロンプト | できること |
 | --- | --- |
 | [illustration](prompts/illustration/) | 画像生成のプロンプトに追加し、AI らしさを抑える |
+| [illustration-local-model](prompts/illustration-local-model/) | 画像生成のプロンプトに追加し、AI らしさを抑えたうえで、ローカルモデル風の今どきの絵柄にする |
 
 illustration を追加した場合の比較です。
 
