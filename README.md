@@ -10,6 +10,7 @@ Claude Code と Codex で使っている、日本語の Skill と共通規約で
 | [explain-before-shorten](skills/explain-before-shorten/SKILL.md) | 日本語の説明を、意味と条件を保って簡潔にする |
 | [game-content-writing](skills/game-content-writing/SKILL.md) | ゲーム内の効果・能力・用語・ルールの説明文を作成・検証する |
 | [goal-first-prompt-designer](skills/goal-first-prompt-designer/SKILL.md) | 目的と必須条件をすり合わせてから、AI 向けプロンプトを作る |
+| [image-prompt-designer](skills/image-prompt-designer/SKILL.md) | 画像生成のプロンプトを、最小の記述から生成結果を見て1つずつ足して作る |
 | [learn-from-corrections](skills/learn-from-corrections/SKILL.md) | セッションで受けた指摘から、規約に残す教訓と文案を提案する |
 | [session-close](skills/session-close/SKILL.md) | 会話で確定した情報を、既存の文書や Skill へ整理する |
 

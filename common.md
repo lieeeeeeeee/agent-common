@@ -93,7 +93,7 @@
 
 7.1. AIが読む文章（規約、ドキュメント、プロンプト）は、第 6 章に加えて本章に従うこと。
 
-7.2. ユーザーからAIが読む文章の作成・修正を依頼されたときは、goal-first-prompt-designer Skill に従うこと。
+7.2. ユーザーからAIが読む文章の作成・修正を依頼されたときは、goal-first-prompt-designer Skill に従うこと。画像生成のプロンプトでは、image-prompt-designer Skill にも従うこと。
 
 7.3. 読み手の出力がゴールと過不足なく一致するように書くこと。ゴールの要素をすべて含んでいても、ゴール外の要素を含む出力は一致していないとみなす。
 
@@ -126,6 +126,7 @@
 | `skills/explain-before-shorten/` | 全プロジェクト | `~/.claude/skills/explain-before-shorten`、`~/.codex/skills/explain-before-shorten` |
 | `skills/game-content-writing/` | 全プロジェクト | `~/.claude/skills/game-content-writing`、`~/.codex/skills/game-content-writing` |
 | `skills/goal-first-prompt-designer/` | 全プロジェクト | `~/.claude/skills/goal-first-prompt-designer`、`~/.codex/skills/goal-first-prompt-designer` |
+| `skills/image-prompt-designer/` | 全プロジェクト | `~/.claude/skills/image-prompt-designer`、`~/.codex/skills/image-prompt-designer` |
 | `skills/learn-from-corrections/` | 全プロジェクト | `~/.claude/skills/learn-from-corrections`、`~/.codex/skills/learn-from-corrections` |
 | `skills/session-close/` | 全プロジェクト | `~/.claude/skills/session-close`、`~/.codex/skills/session-close` |
 
