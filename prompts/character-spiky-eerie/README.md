@@ -3,16 +3,16 @@
 強弱のある黒線と尖ったシルエットで、少し不気味なキャラクターにするためのプロンプトです。キャラクターの中身・ポーズ・背景を指定するプロンプトの後ろに追加して使います。
 
 ```text
-## Art style
+## 絵柄
 
-- No textures
-- Heavy inking, cel shading
-- Angular #000000 line art, about 10px thick
-- Two-tone shading on each part, with each part exaggerated and stylized
-- Faces simplified into iconic symbols with minimal detail
-- Fine details omitted and merged into single masses
-- Muted, desaturated base colors, with a vivid color used in only one spot
-- Gloomy, slightly eerie mood
+- テクスチャを禁止
+- Heavy Inking, セルシェーディング
+- 10px前後の角ばった #000000 の線画
+- パーツごとに陰影を2色のみで塗り、誇張してデフォルメする
+- 顔は描き込みを抑えて記号化する
+- 細部は省略して一塊で描く
+- くすんだ低彩度の色面をベースに、鮮やかな色は一か所だけに使う
+- 陰気で、少し不気味な雰囲気にする
 ```
 
 ## 制約
