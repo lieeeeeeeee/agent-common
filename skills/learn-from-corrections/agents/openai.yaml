@@ -1,5 +1,5 @@
 interface:
   display_name: "Learn From Corrections"
-  short_description: "このセッションでユーザーから受けた指摘のうち、今後同じ指摘を受けないよう規約などに残すべき教訓を洗い出し、反映先と文案を提案する。"
+  short_description: "明確になった用途や繰り返された依頼、指摘から次回の行動を整理する"
 policy:
   allow_implicit_invocation: false
