@@ -46,6 +46,8 @@ ln -s "$PWD/skills/adr-writing" ~/.codex/skills/adr-writing
 | [illustration](prompts/illustration/) | 画像生成のプロンプトに追加し、AI らしさを抑える |
 | [illustration-local-model](prompts/illustration-local-model/) | 画像生成のプロンプトに追加し、AI らしさを抑えたうえで、ローカルモデル風の今どきの絵柄にする |
 | [background-grainy-glow](prompts/background-grainy-glow/) | 場所・雰囲気・色を指定するプロンプトに追加し、ざらついた筆致で暗がりに光源が光る背景画にする |
+| [character-spiky-eerie](prompts/character-spiky-eerie/) | キャラクターの中身・ポーズ・背景を指定するプロンプトに追加し、強弱のある黒線と尖ったシルエットで、少し不気味なキャラクターにする |
+| [scrapbook-avatar](prompts/scrapbook-avatar/) | 中の人の写真とアバターの画像に添えて使い、アバターと中の人を1枚のスクラップブックのページにまとめる |
 
 illustration を追加した場合の比較です。
 
