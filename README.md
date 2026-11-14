@@ -39,6 +39,15 @@ ln -s "$PWD/skills/adr-writing" ~/.codex/skills/adr-writing
 
 `~/.claude/CLAUDE.md` や `~/.codex/AGENTS.md` へそのまま置くと既存の設定を置き換えるため、必要な章だけ取り入れてください。第 8 章は作者の好みの口調、第 9 章は作者の環境のファイル配置です。
 
+## ゲームづくり・UIの原則
+
+| 文書 | 適用する作業 |
+| --- | --- |
+| [game-principles.md](game-principles.md) | ゲームの仕様・効果・演出の設計・変更・レビュー |
+| [ui-principles.md](ui-principles.md) | ゲーム・アプリのUI設計・実装・レビュー |
+
+`common.md` から対象の作業時に参照します。各ゲームの `doc/game-principles.md` は、このリポジトリの実体へのシンボリックリンクです。ゲーム固有の軸・仕様・表記は各プロジェクトで管理します。
+
 ## プロンプト
 
 | プロンプト | できること |

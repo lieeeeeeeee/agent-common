@@ -2,6 +2,8 @@
 
 全プロジェクトに適用する。プロジェクト固有の規約（リポジトリ直下の `AGENTS.md` / `CLAUDE.md`）と衝突した場合は、そちらを優先する。
 
+ゲームの仕様・UI・演出を設計・変更・レビューするときは、`~/.config/agent-common/game-principles.md` を読む。ゲーム・アプリのUIを設計・実装・レビューするときは、`~/.config/agent-common/ui-principles.md` を読む。
+
 ## 0. 基本方針
 
 0.1. 判断は自分で行って進めること。次の場合に限り、その判断の前にユーザーに確認すること。
@@ -126,6 +128,7 @@
 | 実体 | 適用範囲 | リンク元 |
 | --- | --- | --- |
 | `common.md`（本ファイル） | 全プロジェクト | `~/.claude/CLAUDE.md`、`~/.codex/AGENTS.md` |
+| `game-principles.md` | ゲームの仕様・UI・演出 | `SUMKIN/doc/game-principles.md`、`combo180/doc/game-principles.md` |
 | `skills/adr-writing/` | 全プロジェクト | `~/.claude/skills/adr-writing`、`~/.codex/skills/adr-writing` |
 | `skills/explain-before-shorten/` | 全プロジェクト | `~/.claude/skills/explain-before-shorten`、`~/.codex/skills/explain-before-shorten` |
 | `skills/game-content-writing/` | 全プロジェクト | `~/.claude/skills/game-content-writing`、`~/.codex/skills/game-content-writing` |
