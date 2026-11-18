@@ -1,6 +1,6 @@
 # イラスト制作（ローカルモデル風）
 
-AI らしさを抑えたうえで、ローカルモデル風の今どきの絵柄にするためのルールです。画像生成のプロンプトに追加して使います。
+AI らしさを抑えたうえで、ローカルモデル風の今どきの絵柄にするためのルール。画像生成のプロンプトに追加して使う。
 
 ```text
 ## イラスト制作では、以下のルールを守る。
@@ -29,7 +29,7 @@ AI らしさを抑えたうえで、ローカルモデル風の今どきの絵�
 Strict prompt adherence. No extraneous text, symbols, decorative clutter or props. Uncluttered composition, intentional negative space, restrained visual noise.
 ```
 
-迫力のある構図にしたい場合は、以下も追加します。
+迫力のある構図にしたい場合は、以下も追加する。
 
 ```text
 ## 構図
