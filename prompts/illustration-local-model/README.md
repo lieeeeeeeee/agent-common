@@ -24,5 +24,7 @@ Gペン風の繊細な細線と荒々しい太線が混在する、強弱のあ�
 
 顔立ちは非写実的に単純化し端正な顔立ちを避け、顔は小さくする。表情・ポーズは状況に合った自然で控えめなものにする。
 
-未指定の文字・記号は追加しない。
+### 共通
+
+Strict prompt adherence. No extraneous text, symbols, or objects. Uncluttered composition, intentional negative space, restrained visual noise.
 ```
