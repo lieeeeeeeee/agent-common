@@ -28,3 +28,12 @@ AI らしさを抑えたうえで、ローカルモデル風の今どきの絵�
 
 Strict prompt adherence. No extraneous text, symbols, decorative clutter or props. Uncluttered composition, intentional negative space, restrained visual noise.
 ```
+
+迫力のある構図にしたい場合は、以下も追加します。
+
+```text
+## 構図
+
+超広角の誇張パース。
+前景に人体の一部のみを極端にフォアショートニング。
+```
