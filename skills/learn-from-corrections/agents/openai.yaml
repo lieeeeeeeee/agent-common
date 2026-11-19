@@ -1,5 +1,5 @@
 interface:
   display_name: "Learn From Corrections"
-  short_description: "明確になった用途や繰り返された依頼、指摘から次回の行動を整理する"
+  short_description: "次回も必要なユーザー固有の出力・運用条件と、反映先・文案を提案する"
 policy:
   allow_implicit_invocation: false
