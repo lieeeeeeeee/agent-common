@@ -35,7 +35,7 @@ Strict prompt adherence. No extraneous text, symbols, decorative clutter or prop
 ## 構図
 
 超広角の誇張パース。
-人体の一部だけフォアショートニング。
+解剖学的に成立するポーズで、人体の一部だけフォアショートニング。
 ```
 
 小物の色を引き立てたい場合は、以下も追加する。
