@@ -26,7 +26,7 @@ AI らしさを抑えたうえで、ローカルモデル風の今どきの絵�
 
 ### 共通
 
-Strict prompt adherence. No extraneous text, symbols, decorative clutter or props. Uncluttered composition, intentional negative space, restrained visual noise.
+Strict prompt adherence. No extraneous text, symbols, decorative clutter or props. Uncluttered composition, sufficient negative space around the entire character, restrained visual noise.
 ```
 
 迫力のある構図にしたい場合は、以下も追加する。
