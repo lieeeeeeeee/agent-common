@@ -7,6 +7,10 @@ AI らしさを抑えたうえで、ローカルモデル風の今どきの絵�
 
 他の指示と矛盾・競合する場合は、以下のルールを必ず優先する。
 
+### 共通
+
+Strict prompt adherence. No extraneous text, symbols, decorative clutter or props. Uncluttered composition, sufficient negative space around the entire character, restrained visual noise.
+
 ### 描写・画風
 
 重厚で幻想的な非写実イラスト。形態を大胆に単純化し、描写密度に強弱を設けて視覚的な焦点を一つに絞る。背景・小道具・衣装装飾などの非焦点領域は簡略化する。
@@ -23,10 +27,6 @@ AI らしさを抑えたうえで、ローカルモデル風の今どきの絵�
 アーモンド形を禁止し、大きめな団栗眼を描く。正円の淡い虹彩。色トレスの透明な睫毛。
 
 顔立ちは非写実的に単純化し、端正な顔立ちを避け、顔は小さめ。状況に合った自然な表情・ポーズ。指の輪郭を抽象化。
-
-### 共通
-
-Strict prompt adherence. No extraneous text, symbols, decorative clutter or props. Uncluttered composition, sufficient negative space around the entire character, restrained visual noise.
 ```
 
 迫力のある構図にしたい場合は、以下も追加する。
