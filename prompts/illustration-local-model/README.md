@@ -9,11 +9,11 @@ AI らしさを抑えたうえで、ローカルモデル風の今どきの絵�
 
 ### 共通
 
-Strict prompt adherence. No extraneous text, symbols, decorative clutter or props. Uncluttered composition, sufficient negative space around the entire character, restrained visual noise.
+Strict prompt adherence. Non-photorealistic illustration. No extraneous text, symbols, decorative clutter or props. Uncluttered composition, sufficient negative space around the entire character, restrained visual noise.
 
 ### 描写・画風
 
-重厚で幻想的な非写実イラスト。形態を大胆に単純化し、描写密度に強弱を設けて視覚的な焦点を一つに絞る。背景・小道具・衣装装飾などの非焦点領域は簡略化する。
+形態を大胆に単純化し、描写密度に強弱を設けて視覚的な焦点を一つに絞る。背景・小道具・衣装装飾などの非焦点領域は簡略化する。
 衣服の細部は抽象化し、色面を明確に塗り分ける。
 
 ハイコントラストな陰影表現。非焦点領域は大胆に明度を下げる。明部には無彩色のハイライトを用いる。単調なグラデーション、写実的な質感、過剰な光沢、油彩風の筆致を避ける。
