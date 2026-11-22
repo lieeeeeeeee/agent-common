@@ -24,7 +24,7 @@ Strict prompt adherence. Non-photorealistic illustration. No extraneous text, sy
 
 ### 人物
 
-団栗眼. 淡い色の虹彩. 色トレスの透明な睫毛.
+団栗眼, 淡い色の虹彩, 色トレスの透明な睫毛, anime eyes.
 
 顔立ちは非写実的に単純化し, 端正な顔立ちを避け, 顔は小さめ. 指の輪郭を抽象化.
 ```
