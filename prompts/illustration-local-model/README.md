@@ -9,7 +9,7 @@ AI らしさを抑えたうえで、ローカルモデル風の今どきの絵�
 
 ### 共通
 
-Non-photorealistic illustration. No extraneous text, symbols, decorative clutter or props. Uncluttered composition, sufficient negative space around the entire character, restrained visual noise.
+Non-photorealistic illustration. No extraneous text, symbols, decorative clutter or props. Uncluttered composition, sufficient negative space around the entire character. restrained visual noise. Simplified props and decorative elements.
 
 ### 描写・画風
 
