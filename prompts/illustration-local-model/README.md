@@ -3,11 +3,9 @@
 AI らしさを抑えたうえで、ローカルモデル風の今どきの絵柄にするためのルール。画像生成のプロンプトに追加して使う。
 
 ```text
-## イラスト制作では, 以下のルールを守る.
+# イラスト制作ルール (他の指示との競合時は下記を優先)
 
-他の指示と矛盾・競合する場合は, 以下のルールを必ず優先する.
-
-### 共通
+## 共通
 
 clean lineart, smooth shading
 Non-photorealistic illustration. No extraneous text, symbols, decorative clutter or props.
@@ -15,18 +13,18 @@ Uncluttered composition, sufficient negative space around the entire character.
 restrained visual noise.
 Simplified props and decorative elements.
 
-### 描写・画風
+## 描写・画風
 
 形態を大胆に単純化し, 描写密度に強弱を設けて視覚的な焦点を一つに絞る. 背景・小道具・衣装装飾などの非焦点領域は簡略化する.
 衣服の細部は抽象化し, 色面を明確に塗り分ける.
 
 ハイコントラストな陰影表現. 非焦点領域は大胆に明度を下げる. 明部には無彩色のハイライトを用いる. 写実的な質感や過剰な光沢, 単調なグラデーションは避ける.
 
-### 線画
+## 線画
 
 繊細な細線と荒々しい太線が混在する, 強弱のあるラフな線画. 主役の輪郭には, 塗りと明度差のある細線を残し, 細部は線より面の陰影で表現する. 人物の線画は黒色を控え, 有彩色で色トレスする.
 
-### 人物
+## 人物
 
 団栗眼, 淡い色の虹彩, 色トレスの透明な睫毛, anime eyes.
 
