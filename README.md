@@ -57,6 +57,7 @@ ln -s "$PWD/skills/adr-writing" ~/.codex/skills/adr-writing
 | [background-grainy-glow](prompts/background-grainy-glow/) | 場所・雰囲気・色を指定するプロンプトに追加し、ざらついた筆致で暗がりに光源が光る背景画にする |
 | [character-spiky-eerie](prompts/character-spiky-eerie/) | キャラクターの中身・ポーズ・背景を指定するプロンプトに追加し、強弱のある黒線と尖ったシルエットで、少し不気味なキャラクターにする |
 | [scrapbook-avatar](prompts/scrapbook-avatar/) | 中の人の写真とアバターの画像に添えて使い、アバターと中の人を1枚のスクラップブックのページにまとめる |
+| [style-keywords](prompts/style-keywords/) | 画像生成のプロンプトに足す絵柄の英語表現を、部品を組み合わせて作る |
 
 illustration を追加した場合の比較です。
 
