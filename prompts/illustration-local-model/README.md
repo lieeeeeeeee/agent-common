@@ -7,11 +7,11 @@ AI らしさを抑えたうえで、ローカルモデル風の今どきの絵�
 
 ### 共通
 
-clean lineart, smooth shading
+clean lineart, smooth shading, consistent rendering
+
 Non-photorealistic illustration. No extraneous text, symbols, decorative clutter or props.
-Uncluttered composition, sufficient negative space around the entire character.
-restrained visual noise.
-Simplified props and decorative elements.
+
+Uncluttered composition, simple background, generous negative space. restrained visual noise. Simplified props and decorative elements.
 
 ### 描写・画風
 
