@@ -151,8 +151,6 @@
 | アーモンド形の目 | almond-shaped eyes |
 | アンニュイな目元 | heavy-lidded eyes |
 
-アーモンド形の目は、 [illustration-local-model](../illustration-local-model/) の団栗眼とぶつかる。
-
 ## 線画
 
 | 日本語 | 英語 |
@@ -205,5 +203,3 @@
 | プロ品質 | professional, professional illustration quality |
 | 高精細 | highly detailed |
 | 緻密なディテール | intricate details |
-
-[illustration-local-model](../illustration-local-model/) の「形態を大胆に単純化」「非焦点領域は簡略化」と逆向き。
