@@ -25,7 +25,7 @@ python3 scripts/extract_logs.py yesterday   # today / yesterday / YYYY-MM-DD
 
 `assets/template.html` を `~/enikki/YYYY-MM-DD.html` に写し、`<title>`・`DIARY`・`drawScene` だけを書き換える。
 
-- `DIARY` のなまえは自分の名前、てんきはログに出てこなければ「みてない」
+- `DIARY` のなまえは自分の名前のカタカナ、てんきはログに出てこなければ「みてない」
 - `drawScene` は、文に書いた出来事から1〜2つを、子どもが描いた1枚の絵にする。人物は `KIDS` にあるその AI の見た目で、ほかはファイル内の部品とクレヨンの関数 (`shape`・`crayonPath`・`crayonFill`) で描く
 
 ## 4. PNG にして渡す

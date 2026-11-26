@@ -508,7 +508,8 @@
     let x = cx - total / 2;
     chars.forEach((ch, i) => {
       const R = mulberry(hash(seed, i, 11));
-      penChar(g, ch, x + ws[i] / 2 + (R() - 0.5) * size * 0.06, cy + (R() - 0.5) * size * 0.12, size * (0.95 + R() * 0.1), (R() - 0.5) * 0.12, seed + i);
+      const low = SMALL.has(ch) ? size * 0.16 : 0; // 小さい字は下にそろえる
+      penChar(g, ch, x + ws[i] / 2 + (R() - 0.5) * size * 0.06, cy + low + (R() - 0.5) * size * 0.12, size * (0.95 + R() * 0.1), (R() - 0.5) * 0.12, seed + i);
       x += ws[i] + gap;
     });
   }
@@ -519,11 +520,18 @@
     ['h', DIARY.month, 64], ['p', 'がつ', 58], ['h', DIARY.day, 64], ['p', 'にち', 58], ['h', DIARY.week, 54], ['p', 'ようび', 86],
     ['g', '', 28], ['p', 'てんき', 86], ['h', DIARY.weather, 140], ['g', '', 28], ['p', 'なまえ', 86], ['h', DIARY.name, 132],
   ];
+  // 書きこむ欄は字数に合わせて広げ、わくの幅をこえるときは、書きこむ欄だけを縮めて字も小さくする
+  const ems = (t) => [...t].reduce((a, ch) => a + (/[\x20-\x7e]/.test(ch) ? 0.6 : 1), 0);
   function headLayout() {
-    const items = HEAD_ITEMS.map(([kind, text, w]) => [kind, text, kind === 'h' ? Math.max(w, [...text].length * 34 + 16) : w]);
-    const total = items.reduce((a, it) => a + it[2], 0);
-    let x = FR.x + (FR.w - total) / 2;
-    return items.map((it) => { const c = { kind: it[0], text: it[1], x, w: it[2] }; x += it[2]; return c; });
+    const items = HEAD_ITEMS.map(([kind, text, w]) => ({ kind, text, w: kind === 'h' ? Math.max(w, ems(text) * 34 + 16) : w }));
+    const fixed = items.reduce((a, it) => a + (it.kind === 'h' ? 0 : it.w), 0), flex = items.reduce((a, it) => a + (it.kind === 'h' ? it.w : 0), 0);
+    const k = Math.min(1, (FR.w - fixed) / flex);
+    let x = FR.x + (FR.w - fixed - flex * k) / 2;
+    return items.map((it) => {
+      const w = it.kind === 'h' ? it.w * k : it.w, c = { ...it, x, w };
+      c.size = Math.min([...it.text].length > 2 ? 32 : 38, (w - 14) / Math.max(1, ems(it.text)));
+      x += w; return c;
+    });
   }
   function drawPrinted(g) {
     g.setTransform(S, 0, 0, S, 0, 0);
@@ -593,7 +601,7 @@
       if (open || close) { size *= 1.25; dx = 0; dy = open ? cs * 0.14 : -cs * 0.14; }    // たて書きのかっこは次の字・前の字に寄せる
       penChar(g, ch, cx + dx, cy + dy, size, rot, 5000 + i);
     });
-    for (const it of headLayout()) if (it.kind === 'h') penWord(g, it.text, it.x + it.w / 2, HEAD_Y + 2, it.text.length > 2 ? 32 : 38, 6000 + it.x);
+    for (const it of headLayout()) if (it.kind === 'h') penWord(g, it.text, it.x + it.w / 2, HEAD_Y + 2, it.size, 6000 + it.x);
   }
 
   // ---------- 絵の部品 (わくの中の座標。横 900 × たて 520) ----------
