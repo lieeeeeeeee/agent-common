@@ -1,3 +1,3 @@
 interface:
   display_name: "Picture Diary"
-  short_description: "その日の Claude Code・Codex とのやり取りから、クレヨンの絵日記を書く"
+  short_description: "その日の Claude Code・Codex・Gemini CLI とのやり取りから、クレヨンの絵日記を書く"

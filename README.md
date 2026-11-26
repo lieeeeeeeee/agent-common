@@ -12,7 +12,7 @@ Claude Code と Codex で使っている、日本語の Skill と共通規約で
 | [goal-first-prompt-designer](skills/goal-first-prompt-designer/SKILL.md) | AI 向けプロンプトを作成・改善する |
 | [image-prompt-designer](skills/image-prompt-designer/SKILL.md) | 最小限の記述から、生成結果を比べて1記述ずつ調整する |
 | [learn-from-corrections](skills/learn-from-corrections/SKILL.md) | ユーザー固有の出力・運用条件を整理し、反映先と文案を提案する |
-| [picture-diary](skills/picture-diary/SKILL.md) | その日の Claude Code・Codex とのやり取りから、AI が小学生の絵日記を書く |
+| [picture-diary](skills/picture-diary/SKILL.md) | その日の Claude Code・Codex・Gemini CLI とのやり取りから、AI が小学生の絵日記を書く |
 | [session-close](skills/session-close/SKILL.md) | 会話で確定した情報を、既存の文書や Skill へ整理する |
 
 `session-close` は、Skill の作成・更新に skill-creator Skill を使います。

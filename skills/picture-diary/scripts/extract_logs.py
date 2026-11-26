@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
-"""指定した日の Claude Code と Codex の会話 (発言と返答の文だけ) を、セッションごとのテキストに書き出す。
+"""指定した日の Claude Code・Codex・Gemini CLI の会話 (発言と返答の文だけ) を、セッションごとのテキストに書き出す。
 
 使い方: extract_logs.py [today | yesterday | YYYY-MM-DD] [出力先ディレクトリ]
 1日は朝5時から翌朝5時まで (この PC のタイムゾーン)。ツールの実行結果と、会話を圧縮したときの要約は含めない。
 """
 import datetime as dt
 import glob
+import hashlib
 import json
 import os
 import sys
@@ -98,13 +99,78 @@ def codex_sessions(lo, hi):
             yield 'codex', os.path.basename(path)[-14:-6], cwd, lines
 
 
+def gemini_text(content):
+    if isinstance(content, str):
+        return content
+    out = []
+    for p in content if isinstance(content, list) else []:
+        s = p.get('text', '') if isinstance(p, dict) else ''
+        if '--- Content from referenced files ---' in s:  # @ で渡したファイルの中身は読まない
+            break
+        out.append(s)
+    return ''.join(out)
+
+
+def gemini_messages(path):
+    if path.endswith('.json'):
+        with open(path, encoding='utf-8', errors='replace') as f:
+            d = json.load(f)
+        return d.get('kind'), d.get('messages') or []
+    # .jsonl は追記式。同じ id が書き直されるので、最後のものを使う
+    kind, msgs = None, {}
+    with open(path, encoding='utf-8', errors='replace') as f:
+        for raw in f:
+            try:
+                d = json.loads(raw)
+            except ValueError:
+                continue
+            if 'sessionId' in d and 'kind' in d:
+                kind = d['kind']
+            for m in [d] + ((d.get('$set') or {}).get('messages') or []):
+                if m.get('id') and m.get('type'):
+                    msgs[m['id']] = m
+    return kind, list(msgs.values())
+
+
+def gemini_sessions(lo, hi):
+    root = os.path.expanduser('~/.gemini')
+    try:
+        with open(os.path.join(root, 'projects.json'), encoding='utf-8') as f:
+            paths = list((json.load(f).get('projects') or {}).items())
+    except (OSError, ValueError):
+        paths = []
+    # tmp の下のフォルダ名は、プロジェクトの短い名前か、パスの sha256
+    where = {name: p for p, name in paths} | {hashlib.sha256(p.encode()).hexdigest(): p for p, _ in paths}
+    for path in glob.glob(os.path.join(root, 'tmp/*/chats/session-*.json*')):
+        if os.path.getmtime(path) < lo.timestamp():
+            continue
+        try:
+            kind, msgs = gemini_messages(path)
+        except (OSError, ValueError):
+            continue
+        if kind not in (None, 'main'):
+            continue
+        lines = []
+        for m in msgs:
+            role = {'user': 'USER', 'gemini': 'GEMINI'}.get(m.get('type'))
+            if not role or not m.get('timestamp'):
+                continue
+            t = local(m['timestamp'])
+            s = gemini_text(m.get('content')).strip()
+            if lo <= t < hi and s and not s.startswith('<session_context>'):
+                lines.append((t, role, s))
+        if lines:
+            folder = os.path.basename(os.path.dirname(os.path.dirname(path)))
+            yield 'gemini', os.path.basename(path).split('.')[0][-8:], where.get(folder, folder), lines
+
+
 def main():
     day, lo, hi = day_range(sys.argv[1] if len(sys.argv) > 1 else None)
     out = sys.argv[2] if len(sys.argv) > 2 else tempfile.mkdtemp(prefix=f'diary-{day}-')
     os.makedirs(out, exist_ok=True)
     print(f'{day} ({lo:%m/%d %H:%M} - {hi:%m/%d %H:%M})  出力先: {out}')
     rows = []
-    for tool, sid, cwd, lines in [*claude_sessions(lo, hi), *codex_sessions(lo, hi)]:
+    for tool, sid, cwd, lines in [*claude_sessions(lo, hi), *codex_sessions(lo, hi), *gemini_sessions(lo, hi)]:
         lines.sort(key=lambda x: x[0])
         name = f'{lines[0][0]:%H%M}_{tool}_{sid}.txt'
         body = '\n\n'.join(f'[{t:%H:%M}] {who}: {s}' for t, who, s in lines)
