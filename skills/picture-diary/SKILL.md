@@ -1,6 +1,6 @@
 ---
 name: picture-diary
-description: "その日の Claude Code と Codex のやり取りを読み、AI 自身が書き手になって、クレヨンの絵とえんぴつの縦書きの文で小学生の絵日記を1ページ作る。「今日の日記書いて」「昨日の日記書いて」「11月25日の絵日記を書いて」などと頼まれたときに使う。"
+description: "その日の Claude Code と Codex のやり取りを読み、AI 自身が書き手になって、クレヨンの絵とえんぴつの縦書きの文で小学生の絵日記を1ページ作り、PNG で渡す。「今日の日記書いて」「昨日の日記書いて」「11月25日の絵日記を書いて」などと頼まれたときに使う。"
 ---
 
 # 絵日記
@@ -27,7 +27,7 @@ python3 scripts/extract_logs.py yesterday   # today / yesterday / YYYY-MM-DD
 
 ## 3. ページを作る
 
-`assets/template.html` を写し、次だけを書き換える。クレヨンの質感、帳面、マスへの書き方はそのまま使う。
+`assets/template.html` を `~/enikki/YYYY-MM-DD.html` に写し、次だけを書き換える。クレヨンの質感、帳面、マスへの書き方はそのまま使う。
 
 - `<title>`: `<なまえ>のえにっき <月>月<日>日`
 - `DIARY`: 月、日、曜日 (漢字1字)、てんき、なまえ (自分の名前のカタカナ)、段落、絵の説明。てんきは、ログに出てこなければ「みてない」
@@ -36,8 +36,14 @@ python3 scripts/extract_logs.py yesterday   # today / yesterday / YYYY-MM-DD
   - 空・地面・パソコン・紙・クレヨンはファイル内の部品を使い、足りないものは同じクレヨンの関数 (`shape`・`crayonPath`・`crayonFill`) で描く
   - わくの中は横 900 × たて 520。地面の上のふちは y=452 前後、人物の足もとは y=455
 
-画像で確かめられる環境なら、公開前に1回、ページ全体を見て、絵の重なりとマスの字を確かめる。ヘッドレス Chrome で撮るときは、ファイルを `<!doctype html>` と `<head>` で包み、`--use-angle=swiftshader --enable-unsafe-swiftshader` を付ける。付けないと WebGL が使えず、かすれが簡易表示になる。
+## 4. PNG にする
 
-## 4. 渡す
+```sh
+python3 scripts/render_png.py ~/enikki/YYYY-MM-DD.html ~/enikki/YYYY-MM-DD.png
+```
 
-Artifact を公開できる環境では、Artifact として公開して URL を伝える。公開できない環境では `~/enikki/YYYY-MM-DD.html` に保存して場所を伝える。
+ヘッドレス Chrome でページを描き、横 1500 画素の PNG にする。画像を見られる環境なら、PNG を見て、絵の重なりとマスの字を確かめる。
+
+## 5. 渡す
+
+PNG の場所を伝える。Artifact を公開できる環境では、HTML を Artifact としても公開して URL を添える。Chrome がなく PNG を作れなかったときは、HTML の場所を伝え、PNG には Chrome が要ると添える。
