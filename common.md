@@ -1,6 +1,6 @@
 # 共通規約
 
-全プロジェクトに適用する。プロジェクト固有の規約 (リポジトリ直下の `AGENTS.md` / `CLAUDE.md` ) と衝突した場合は、そちらを優先する。
+全プロジェクトの全作業に適用する規約だけを置く。プロジェクト固有の規約 (リポジトリ直下の `AGENTS.md` / `CLAUDE.md` ) と衝突した場合は、そちらを優先する。
 
 ゲームの仕様・UI・演出を設計・変更・レビューするときは、 `~/.config/agent-common/game-principles.md` を読む。ゲーム・アプリのUIを設計・実装・レビューするときは、 `~/.config/agent-common/ui-principles.md` を読む。発表資料を作成・変更・レビューするときは、 `~/.config/agent-common/presentation-principles.md` を読む。
 
