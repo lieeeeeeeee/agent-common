@@ -3,32 +3,13 @@
 AI らしさを抑えたうえで、ローカルモデル風の今どきの絵柄にするためのルール。画像生成のプロンプトに追加して使う。
 
 ```text
-## イラスト制作ルール (他の指示との競合時は下記を優先)
+## Style
 
-### 共通
+Varied detail density, single focal point.
 
-clean lineart, smooth shading, consistent rendering
-
-Non-photorealistic illustration. No extraneous text, symbols, decorative clutter or props.
-
-Uncluttered composition, simple background, generous negative space. restrained visual noise. Simplified props and decorative elements.
-
-### 描写・画風
-
-形態を大胆に単純化し, 描写密度に強弱を設けて視覚的な焦点を一つに絞る. 背景・小道具・衣装装飾などの非焦点領域は簡略化する.
-衣服の細部は抽象化し, 色面を明確に塗り分ける.
-
-ハイコントラストな陰影表現. 非焦点領域は大胆に明度を下げる. 明部には無彩色のハイライトを用いる. 写実的な質感や過剰な光沢, 単調なグラデーションは避ける.
-
-### 線画
-
-繊細な細線と荒々しい太線が混在する, 強弱のあるラフな線画. 主役の輪郭には, 塗りと明度差のある細線を残し, 細部は線より面の陰影で表現する. 人物の線画は黒色を控え, 有彩色で色トレスする.
-
-### 人物
-
-団栗眼, 淡い色の虹彩, 色トレスの透明な睫毛, anime eyes.
-
-顔立ちは非写実的に単純化し, 端正な顔立ちを避け, 顔は小さめ. 指の輪郭を抽象化.
+No idealized facial features. anime eyes, simplified finger.
+No photorealism, No intricate rendering.
+No extraneous text, symbols, props or decorations.
 ```
 
 迫力のある構図にしたい場合は、以下も追加する。
