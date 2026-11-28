@@ -7,7 +7,7 @@ AI らしさを抑えたうえで、ローカルモデル風の今どきの絵�
 
 Varied detail density, single focal point.
 
-No idealized facial features. anime eyes, simplified finger.
+No idealized facial features. anime eyes, simplified fingers.
 No photorealism, No intricate rendering.
 No extraneous text, symbols, props or decorations.
 ```
